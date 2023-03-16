@@ -165,6 +165,7 @@ document.addEventListener('keydown', (event) => {
   redraw();
 
   if (player.row === exit.row && player.col === exit.col) {
-    alert('You won!');
+    document.getElementById("gameTitle").innerText = "Biggest Win!";
+    document.getElementById("gameTitle").style.color = "red";
   }
 });
