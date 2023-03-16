@@ -1,0 +1,19 @@
+canvas {
+    border: 1px solid black;
+    background-color: #f0f8ff; /* Light blue background */
+  }
+  
+  /* Maze wall color */
+  .maze-wall {
+    stroke: #6495ed; /* Cornflower blue */
+  }
+  
+  /* Maze visited cell color */
+  .maze-visited {
+    fill: #98fb98; /* Pale green */
+  }
+  
+  /* Player color */
+  .player {
+    fill: #ff4500; /* Orange red */
+  }
