@@ -91,8 +91,11 @@ const exit = {
 };
 
 function redraw() {
-  ctx.fillStyle = 'white';
+  ctx.fillStyle = 'black';
   ctx.fillRect(0, 0, mazeCanvas.width, mazeCanvas.height);
+
+  ctx.strokeStyle = 'white';
+  ctx.lineWidth = 4; // Set the line width for thicker walls
 
   for (const row of grid) {
     for (const cell of row) {
@@ -123,17 +126,23 @@ function redraw() {
     }
   }
 
-  // Draw the player
+  // Draw the player as a square
   ctx.fillStyle = 'red';
-  ctx.beginPath();
-  ctx.arc((player.col + 0.5) * cellSize, (player.row + 0.5) * cellSize, cellSize / 4, 0, 2 * Math.PI);
-  ctx.fill();
+  ctx.fillRect(
+    (player.col + 0.5) * cellSize - cellSize / 4,
+    (player.row + 0.5) * cellSize - cellSize / 4,
+    cellSize / 2,
+    cellSize / 2
+  );
 
-  // Draw the exit
+  // Draw the exit as a square
   ctx.fillStyle = 'green';
-  ctx.beginPath();
-  ctx.arc((exit.col + 0.5) * cellSize, (exit.row + 0.5) * cellSize, cellSize / 4, 0, 2 * Math.PI);
-  ctx.fill();
+  ctx.fillRect(
+    (exit.col + 0.5) * cellSize - cellSize / 4,
+    (exit.row + 0.5) * cellSize - cellSize / 4,
+    cellSize / 2,
+    cellSize / 2
+  );
 }
 
 redraw();

@@ -4,16 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biggest Maze</title>
-  <style>
-    canvas {
-      display: block;
-      margin: 0 auto;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"> <!-- Pixelated font -->
 </head>
 <body>
-  <h1 style="text-align: center;">Biggest Maze</h1>
-  <canvas id="maze" width="400" height="400"></canvas>
+  <h1 class="pixelated">Biggest Maze</h1>
+  <div class="canvas-wrapper">
+    <canvas id="maze" width="400" height="400"></canvas>
+  </div>
   <script src="maze.js"></script>
 </body>
 </html>
